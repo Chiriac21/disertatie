@@ -1,0 +1,10 @@
+@startuml
+class CheckTouch {
+    - counter : int = 0
+    - Awake() : void
+    - Start() : void
+    - Update() : void
+    + CallIfTouchedStarted() : void
+}
+MonoBehaviour <|-- CheckTouch
+@enduml
