@@ -27,10 +27,10 @@ jobs:
       - uses: actions/setup-dotnet@v1
         if: ${{ steps.check_for_code.outputs.CODE_EXISTS == 'true' }}
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
       
       - if: ${{ steps.check_for_code.outputs.CODE_EXISTS == 'true' }}
-        run: dotnet tool install --global PlantUmlClassDiagramGenerator --version 1.2.4
+        run: dotnet tool install --global PlantUmlClassDiagramGenerator
       - if: ${{ steps.check_for_code.outputs.CODE_EXISTS == 'true' }}
         run: dotnet tool restore
         
