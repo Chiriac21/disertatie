@@ -1,0 +1,12 @@
+@startuml
+class ExoGrabApple {
+    + joint2TargetAngle : float = 30f
+    + joint3TargetAngle : float = 45f
+    + joint4TargetAngle : float = 60f
+    + joint5TargetAngle : float = 20f
+    + jointMoveDuration : float = 1.0f
+    + pauseBetweenJoints : float = 0.3f
+    + TriggerGrabSequence() : void
+}
+MonoBehaviour <|-- ExoGrabApple
+@enduml

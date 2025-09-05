@@ -1,0 +1,13 @@
+@startuml
+class ToggleMenuFollow {
+    + followDistance : float = 1.5f
+    + verticalOffset : float
+    + horizontalOffset : float = 0f
+    + ToggleFollow() : void
+    + ToggleEnabled() : void
+}
+MonoBehaviour <|-- ToggleMenuFollow
+ToggleMenuFollow --> "menu" GameObject
+ToggleMenuFollow --> "exoSkeleton" GameObject
+ToggleMenuFollow --> "tmpText" TMP_Text
+@enduml

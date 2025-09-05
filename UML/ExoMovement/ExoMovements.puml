@@ -1,0 +1,10 @@
+@startuml
+class ExoMovements {
+    + maxRotation : float = 45f
+    + minRotation : float
+    + resetDuration : float = 1f
+    + pauseBetweenJoints : float = 0.3f
+    + ResetJointsSequentially() : void
+}
+MonoBehaviour <|-- ExoMovements
+@enduml

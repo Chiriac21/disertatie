@@ -1,0 +1,27 @@
+@startuml
+class GameManager {
+    + GetLeftPartPosition() : Transform
+    + GetRightPartPosition() : Transform
+    + GetFrontPartPosition() : Transform
+    + GetBackPartPosition() : Transform
+    + GetConveyorPartPosition() : Transform
+    + GetConveyorDownScrewPosition() : Transform
+    + GetUpPartsPosition() : Transform
+    + GetConveyorJos() : GameObject
+    + GetConveyorLateralStanga() : GameObject
+    + GetConveyorLateralDreapta() : GameObject
+    + GetConveyorSus() : GameObject
+    + GetConveyorPrincipal() : GameObject
+    + GetParteaFata() : GameObject
+    + GetParteaSpate() : GameObject
+    + GetSurubOrizontalFata() : GameObject
+    + GetSurubOrizontalSpate() : GameObject
+    + GetSurubVertical() : GameObject
+    + GetParteaLateralaStanga() : GameObject
+    + GetParteaLateralaDreapta() : GameObject
+    + GetSuruburiPartiLaterale() : GameObject
+    + GetDezasamblare() : GameObject
+}
+MonoBehaviour <|-- GameManager
+GameManager --> "Instance" GameManager
+@enduml

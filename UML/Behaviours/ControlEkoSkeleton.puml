@@ -1,0 +1,7 @@
+@startuml
+class ControlEkoSkeleton {
+    + ToggleExoskeleton() : void
+    + ToggleFollow() : void
+}
+MonoBehaviour <|-- ControlEkoSkeleton
+@enduml
