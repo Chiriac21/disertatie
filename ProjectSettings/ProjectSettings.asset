@@ -614,13 +614,13 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: MonitorizareaDatelor
+  metroPackageName: Exoskeleton
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 00d68b67da43da01
+  metroCertificateNotAfter: 00550805903ddd01
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: Exoskeleton
