@@ -10,6 +10,14 @@ MonoBehaviour <|-- ToggleMenuFollow
 ToggleMenuFollow --> "menu" GameObject
 ToggleMenuFollow --> "exoSkeleton" GameObject
 ToggleMenuFollow --> "tmpText" TMP_Text
+class ArduinoConnector {
+    + arduinoIP : string = "192.168.43.50"
+    + arduinoPort : int = 12345
+    + ConnectToArduino() : void
+    + SendMessageToArduino(message:string) : void
+}
+MonoBehaviour <|-- ArduinoConnector
+ArduinoConnector --> "connectionLabel" TMP_Text
 class ControlEkoSkeleton {
     + ToggleExoskeleton() : void
     + ToggleFollow() : void
