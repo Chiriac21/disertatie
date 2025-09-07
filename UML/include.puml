@@ -1,0 +1,62 @@
+@startuml
+class ToggleMenuFollow {
+    + followDistance : float = 1.5f
+    + verticalOffset : float
+    + horizontalOffset : float = 0f
+    + ToggleFollow() : void
+    + ToggleEnabled() : void
+}
+MonoBehaviour <|-- ToggleMenuFollow
+ToggleMenuFollow --> "menu" GameObject
+ToggleMenuFollow --> "exoSkeleton" GameObject
+ToggleMenuFollow --> "tmpText" TMP_Text
+class ArduinoConnector {
+    + arduinoIP : string = "192.168.1.102"
+    + arduinoPort : int = 12345
+    + connectTimeoutMs : int = 5000
+    + ConnectToArduino() : void
+    + SendToU3(value:int) : void
+    + SendToU4(value:int) : void
+    + SendAddressed(id:string, value:int) : void
+}
+MonoBehaviour <|-- ArduinoConnector
+ArduinoConnector --> "connectionLabel" TMP_Text
+ArduinoConnector --> "lastReplyLabel" TMP_Text
+class ControlEkoSkeleton {
+    + ToggleExoskeleton() : void
+    + ToggleFollow() : void
+}
+MonoBehaviour <|-- ControlEkoSkeleton
+class SliderAngleDisplay {
+}
+MonoBehaviour <|-- SliderAngleDisplay
+class ExoGrabApple {
+    + joint2TargetAngle : float = 30f
+    + joint3TargetAngle : float = 45f
+    + joint4TargetAngle : float = 60f
+    + joint5TargetAngle : float = 20f
+    + jointMoveDuration : float = 1.0f
+    + pauseBetweenJoints : float = 0.3f
+    + TriggerGrabSequence() : void
+}
+MonoBehaviour <|-- ExoGrabApple
+class EnableThumbCollider {
+}
+MonoBehaviour <|-- EnableThumbCollider
+EnableThumbCollider --> "thumbCollider" Collider
+class ExoMovements {
+    + maxRotation : float = 45f
+    + minRotation : float
+    + resetDuration : float = 1f
+    + pauseBetweenJoints : float = 0.3f
+    + joint3LeftValue : int = 600
+    + joint3ResetValue : int = 750
+    + joint3RightValue : int = 800
+    + joint4LeftValue : int = 350
+    + joint4RightValue : int = 512
+    + joint4ResetValue : int = 430
+    + edgeThreshold : float = 0.02f
+    + ResetJointsSequentially() : void
+}
+MonoBehaviour <|-- ExoMovements
+@enduml

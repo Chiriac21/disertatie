@@ -1,0 +1,6 @@
+@startuml
+class EnableThumbCollider {
+}
+MonoBehaviour <|-- EnableThumbCollider
+EnableThumbCollider --> "thumbCollider" Collider
+@enduml

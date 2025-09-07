@@ -1,0 +1,14 @@
+@startuml
+class ArduinoConnector {
+    + arduinoIP : string = "192.168.1.102"
+    + arduinoPort : int = 12345
+    + connectTimeoutMs : int = 5000
+    + ConnectToArduino() : void
+    + SendToU3(value:int) : void
+    + SendToU4(value:int) : void
+    + SendAddressed(id:string, value:int) : void
+}
+MonoBehaviour <|-- ArduinoConnector
+ArduinoConnector --> "connectionLabel" TMP_Text
+ArduinoConnector --> "lastReplyLabel" TMP_Text
+@enduml
